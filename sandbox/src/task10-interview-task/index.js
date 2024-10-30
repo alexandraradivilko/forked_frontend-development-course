@@ -6,5 +6,16 @@
  * @returns {Number}
  */
 export const solutionFn = (num) => {
-    // Ваш код здесь
+    while (num >= 10) {
+        let product = 1;
+        const digits = String(num).split('');
+
+        for (const digit of digits) {
+            product *= Number(digit);
+        }
+
+        num = product;
+    }
+
+    return num;
 };
